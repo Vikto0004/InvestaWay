@@ -1,16 +1,3 @@
-const swiperBlog = new Swiper(".swiperBlog", {
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    320: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  },
-});
-
 const swiperTestimonial = new Swiper(".swiperTestimonial", {
   spaceBetween: 40,
   centeredSlides: true,
@@ -34,7 +21,7 @@ const swiperTestimonial = new Swiper(".swiperTestimonial", {
       spaceBetween: 30,
     },
     1024: {
-      slidesPerView: 2.5,
+      slidesPerView: 3,
       spaceBetween: 40,
     },
   },

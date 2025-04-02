@@ -1,21 +1,19 @@
-const contactForm = document.querySelector(".contact-form");
+const contactForm = document.querySelector(".hero-form");
+const cookiePopup = document.getElementById("cookiePopup");
+const acceptCookies = document.getElementById("acceptCookies");
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  window.location.href = "./thank-you.html";
+  window.location = "thank-you.html";
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const cookiePopup = document.getElementById("cookiePopup");
-  const acceptCookies = document.getElementById("acceptCookies");
-
-  if (!localStorage.getItem("cookiesAcceptedAxonIA")) {
+setTimeout(() => {
+  if (!localStorage.getItem("cookiesAcceptedInvestaWay")) {
     cookiePopup.style.display = "block";
   }
+}, 5000);
 
-  acceptCookies &&
-    acceptCookies.addEventListener("click", function () {
-      localStorage.setItem("cookiesAcceptedAxonIA", "true");
-      cookiePopup.style.display = "none";
-    });
+acceptCookies.addEventListener("click", function () {
+  localStorage.setItem("cookiesAcceptedInvestaWay", "true");
+  cookiePopup.style.display = "none";
 });
